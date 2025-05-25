@@ -1,5 +1,5 @@
 export default function AdsHome() {
-  const images = ["/window.svg", "/next.svg", "/file.svg", "/globe.svg"];
+  const images = ["/bricks-2181920_1280.jpg", "/coding-924920_1280.jpg", "/sevilla-tower-786180_1280.jpg", "/telework-6795505_1280.jpg"];
 
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4 bg-gray-100">
@@ -11,7 +11,7 @@ export default function AdsHome() {
           <img
             src={src}
             alt={`img-${index}`}
-            className="max-h-full object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
       ))}

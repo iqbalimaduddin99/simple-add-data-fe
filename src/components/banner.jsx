@@ -3,7 +3,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 export default function Banner() {
-  const banners = ["/window.svg", "/next.svg", "/file.svg", "/globe.svg"];
+  const banners = [
+    "/bricks-2181920_1280.jpg",
+    "/coding-924920_1280.jpg",
+    "/sevilla-tower-786180_1280.jpg",
+    "/telework-6795505_1280.jpg",
+  ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ stopOnInteraction: false }),
@@ -29,18 +34,24 @@ export default function Banner() {
   return (
     <div
       ref={emblaRef}
-      className="relative group w-full h-[400px] bg-white overflow-hidden border-b border-gray-300"
+      className="relative group w-full h-[600px] bg-white overflow-hidden border-b border-gray-300"
     >
-      <div className="flex items-center h-full">
+      <div className="flex items-center h-full w-full">
         {banners.map((src, index) => (
           <div
-            className="min-w-full flex justify-center items-center h-full"
+            className="min-w-full w-full h-full flex justify-center items-center"
             key={index}
           >
             <img
               src={src}
               alt={`Banner ${index}`}
-              className="max-h-full max-w-full object-contain"
+              className={`w-full h-full object-cover ${
+                index === 0
+                  ? "object-[center_50%]"
+                  : index === 2
+                  ? "object-[center_40%]"
+                  : "object-top"
+              }`}
             />
           </div>
         ))}
