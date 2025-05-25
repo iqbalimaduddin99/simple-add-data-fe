@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header className="bg-gray-800 text-white">
       <div className="flex justify-between items-center p-4">
-        <div className="text-xl font-bold">LOGO</div>
+        <div className="text-xl font-bold">PartnerIklan.com</div>
 
         <nav className="hidden md:flex space-x-4">
           {menuItems.map((item, index) =>
