@@ -1,11 +1,10 @@
-'use client';
+"use client";
 import React from "react";
 import Header from "../components/header";
 import Banner from "../components/banner";
 import AdsHome from "../components/adsHome";
 import SectionHome from "../components/sectionHome";
 import Footer from "../components/footer";
-
 
 export default function Home() {
   return (
@@ -14,10 +13,11 @@ export default function Home() {
       <main className="flex-1">
         <Banner />
         <AdsHome />
-        <SectionHome />
+        <div className="p-8 md:p-16 lg:p-32">
+          <SectionHome />
+        </div>
       </main>
       <Footer />
     </div>
   );
 }
-

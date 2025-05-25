@@ -45,11 +45,11 @@ export default function SectionItem({ item, reverse }) {
 
   return (
     <div
-      className={`flex gap-4 items-start bg-white p-4 rounded shadow ${
-        reverse ? "flex-row-reverse" : ""
+      className={`flex gap-4 items-start bg-gray-100 p-4 rounded shadow ${
+        reverse ? "flex-row-reverse justify-between" : ""
       }`}
     >
-      <div className="flex justify-center items-center min-w-32 min-h-32">
+      <div className="flex justify-center items-center min-w-32 min-h-32 md:min-w-60 md:min-h-60">
         <img
           src={item.image}
           alt={item.title}
@@ -57,13 +57,11 @@ export default function SectionItem({ item, reverse }) {
         />
       </div>
 
-      <div className="flex flex-col min-w-32 min-h-32 ">
+      <div className={`flex flex-col justify-center min-w-32 min-h-32 md:min-w-60 md:min-h-60 `}>
         <h3 className="font-bold text-lg mb-1">{item.title}</h3>
         <p
           ref={descRef}
-          className={`mb-0 overflow-hidden transition-all duration-300 ${
-            !showMore ? "line-clamp-4" : ""
-          }`}
+          className={`mb-0 overflow-hidden transition-all duration-300 ${!showMore ? "line-clamp-4" : ""} `}
         >
           {item.desc}
         </p>
