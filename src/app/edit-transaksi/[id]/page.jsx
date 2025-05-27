@@ -167,7 +167,7 @@ export default function DataTransaction() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex dark:bg-white dark:text-black">
       {toast && (
         <div
           className={`fixed top-10 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded shadow text-white text-center z-50 ${
@@ -180,7 +180,7 @@ export default function DataTransaction() {
 
       {confirmDeleteIdx !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 shadow-md w-80 text-center">
+          <div className="bg-white dark:bg-white rounded-lg p-6 shadow-md w-80 text-center">
             <p className="mb-4">
               Anda yakin ingin delete detail transaksi ini?
             </p>

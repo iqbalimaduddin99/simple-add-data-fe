@@ -34,7 +34,7 @@ export default function SectionHome() {
   ];
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 dark:bg-white">
       {sections[0].children.map((item, index) => (
         <SectionItem key={item.id} item={item} reverse={index % 2 === 1} />
       ))}

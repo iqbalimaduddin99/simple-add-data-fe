@@ -59,7 +59,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-gray-700">
+        <nav className="md:hidden px-4 pb-4 flex flex-col space-y-2 dark:bg-gray-700 bg-gray-700">
           {menuItems.map((item, index) =>
             item.isDropdown ? (
               <div key={index}>

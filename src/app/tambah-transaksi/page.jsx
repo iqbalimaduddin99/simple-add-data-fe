@@ -187,17 +187,17 @@ export default function DataTransaction() {
         </ul>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6 p-4 w-[82%]">
-        <h2 className="text-2xl font-bold mb-4">Data Transaksi</h2>
+      <form onSubmit={handleSubmit} className="space-y-6 p-4 w-[82%] dark:bg-white">
+        <h2 className="text-2xl font-bold mb-4 dark:text-black">Data Transaksi</h2>
 
         <div className="flex gap-6">
           <div className="flex-1">
-            <label className="block font-semibold mb-1">Description</label>
+            <label className="block font-semibold mb-1 dark:text-black">Description</label>
             <textarea
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
               placeholder="Deskripsi transaksi"
-              className="w-full border border-gray-300 rounded px-3 py-2 resize-none"
+              className="w-full border border-gray-300 rounded px-3 py-2 resize-none dark:text-black"
               style={{ minHeight: "13rem" }}
               required
             />
@@ -205,18 +205,18 @@ export default function DataTransaction() {
 
           <div className="flex flex-col gap-4 w-1/3">
             <div>
-              <label className="block font-semibold mb-1">Code</label>
+              <label className="block font-semibold mb-1 dark:text-black">Code</label>
               <input
                 type="text"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2"
+                className="w-full border border-gray-300 rounded px-3 py-2 dark:text-black"
                 placeholder="Kode transaksi"
                 required
               />
             </div>
 
-            <div>
+            <div className="dark:text-black">
               <label className="block font-semibold mb-1">Rate Euro</label>
               <input
                 type="number"
@@ -229,7 +229,7 @@ export default function DataTransaction() {
               />
             </div>
 
-            <div>
+            <div className="dark:text-black">
               <label className="block font-semibold mb-1">Date Paid</label>
               <input
                 type="date"
@@ -242,7 +242,7 @@ export default function DataTransaction() {
           </div>
         </div>
 
-        <div className="border border-gray-300 rounded p-4 shadow-md space-y-6">
+        <div className="border border-gray-300 rounded p-4 shadow-md space-y-6 dark:text-black">
           {masterCategories.map((cat) => {
             const catDetails = groupedDetails[cat.id] || [];
 

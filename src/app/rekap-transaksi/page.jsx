@@ -56,7 +56,7 @@ export default function RekapTransaksiPage() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex dark:bg-white dark:text-black">
       {/* <Sidebar /> */}
       <div className="w-64 h-screen bg-gray-50 p-4 shadow-lg w-[18%]">
         <ul>

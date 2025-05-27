@@ -94,9 +94,9 @@ export default function TransactionListPage() {
     <div className="flex">
       {confirmDelete.open && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded p-6 max-w-sm text-center shadow-lg">
-            <h3 className="text-lg font-bold mb-4">Peringatan!</h3>
-            <p className="mb-6">
+          <div className="bg-white dark:bg-white rounded p-6 max-w-sm text-center shadow-lg">
+            <h3 className="text-lg font-bold mb-4 dark:text-black">Peringatan!</h3>
+            <p className="mb-6 dark:text-black">
               Jika Anda klik hapus, maka akan menghapus semua transaksi dengan
               code <b>{confirmDelete.code}</b>.<br />
               Masuk ke halaman edit untuk menghapus detail transaksi.
@@ -107,13 +107,13 @@ export default function TransactionListPage() {
             <div className="flex justify-center gap-4">
               <button
                 onClick={handleConfirmedDelete}
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                className="bg-green-600 dark:text-white text-white px-4 py-2 rounded hover:bg-green-700"
               >
                 Ya
               </button>
               <button
                 onClick={closeConfirmDelete}
-                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+                className="bg-red-600 dark:text-white  text-white px-4 py-2 rounded hover:bg-red-700"
               >
                 Tidak
               </button>
@@ -123,7 +123,7 @@ export default function TransactionListPage() {
       )}
 
       {/* <Sidebar /> */}
-      <div className="w-64 h-screen bg-gray-50 p-4 shadow-lg w-[18%]">
+      <div className="w-64 h-screen dark:bg-gray-50 bg-gray-50 p-4 shadow-lg w-[18%]">
         <ul>
           <li>
             <a
@@ -180,9 +180,9 @@ export default function TransactionListPage() {
           </button>
         </ul>
       </div>
-      <div className="p-6 w-[82%]">
-        <div className="bg-white shadow rounded p-6">
-          <h2 className="text-2xl font-bold mb-4">Daftar Transaksi</h2>
+      <div className="p-6 w-[82%] dark:bg-white">
+        <div className="bg-white dark:bg-white shadow rounded p-6">
+          <h2 className="text-2xl dark:text-black shadow font-bold mb-4">Daftar Transaksi</h2>
 
           <div className="flex justify-between mb-4">
             <Link href="/tambah-transaksi">
@@ -200,7 +200,7 @@ export default function TransactionListPage() {
                     setDateFrom("");
                     setDateTo("");
                   }}
-                  className="px-3 py-1 border rounded text-sm"
+                  className="px-3 dark:text-black py-1 border rounded text-sm"
                 >
                   Reset Filter
                 </button>
@@ -209,20 +209,20 @@ export default function TransactionListPage() {
                 type="date"
                 value={dateFrom}
                 onChange={(e) => setDateFrom(e.target.value)}
-                className="border px-2 py-1 rounded text-sm"
+                className="border dark:text-black px-2 py-1 rounded text-sm"
                 placeholder="Dari"
               />
               <input
                 type="date"
                 value={dateTo}
                 onChange={(e) => setDateTo(e.target.value)}
-                className="border px-2 py-1 rounded text-sm"
+                className="border dark:text-black px-2 py-1 rounded text-sm"
                 placeholder="Sampai"
               />
               <select
                 value={categoryId}
                 onChange={(e) => setCategoryId(e.target.value)}
-                className="border px-2 py-1 rounded text-sm"
+                className="border dark:text-black px-2 py-1 rounded text-sm"
               >
                 <option value="">Semua Kategori</option>
                 {masterCategories.map((cat) => (
@@ -236,7 +236,7 @@ export default function TransactionListPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Cari..."
-                className="border px-2 py-1 rounded text-sm"
+                className="border dark:text-black px-2 py-1 rounded text-sm"
               />
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function TransactionListPage() {
                 ].map(([label, key]) => (
                   <th
                     key={label}
-                    className="px-3 py-2 border-b cursor-pointer text-left"
+                    className="px-3 dark:text-black py-2 border-b cursor-pointer text-left"
                     onClick={() => key && handleSort(key)}
                   >
                     {label}{" "}
@@ -271,14 +271,14 @@ export default function TransactionListPage() {
                 if (trx.details.length === 0) {
                   return (
                     <tr key={`${trx.id}-empty`} className="border-b">
-                      <td className="px-3 py-2 text-left">{i + 1}.0</td>
-                      <td className="px-3 py-2 text-left">{trx.desc}</td>
-                      <td className="px-3 py-2 text-left">{trx.code}</td>
-                      <td className="px-3 py-2 text-left">{trx.rate_euro}</td>
-                      <td className="px-3 py-2 text-left">{trx.date_paid}</td>
-                      <td className="px-3 py-2 text-left">-</td>
-                      <td className="px-3 py-2 text-left">-</td>
-                      <td className="px-3 py-2 text-left">-</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{i + 1}.0</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.desc}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.code}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.rate_euro}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.date_paid}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">-</td>
+                      <td className="px-3 py-2 text-left dark:text-black">-</td>
+                      <td className="px-3 py-2 text-left dark:text-black">-</td>
                       <td className="px-3 py-2 text-left space-x-2">
                         <Link href={`/edit-transaksi/${trx.id}`}>
                           <button className="text-blue-600 hover:underline">
@@ -297,20 +297,20 @@ export default function TransactionListPage() {
                 } else {
                   return trx.details.map((detail, j) => (
                     <tr key={`${trx.id}-${j}`} className="border-b">
-                      <td className="px-3 py-2 text-left">
+                      <td className="px-3 py-2 text-left dark:text-black">
                         {i + 1}.{j + 1}
                       </td>
-                      <td className="px-3 py-2 text-left">{trx.desc}</td>
-                      <td className="px-3 py-2 text-left">{trx.code}</td>
-                      <td className="px-3 py-2 text-left">{trx.rate_euro}</td>
-                      <td className="px-3 py-2 text-left">{trx.date_paid}</td>
-                      <td className="px-3 py-2 text-left">
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.desc}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.code}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.rate_euro}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">{trx.date_paid}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">
                         {masterCategories.find(
                           (c) => c.id === detail.transaction_category_id
                         )?.name || "-"}
                       </td>
-                      <td className="px-3 py-2 text-left">{detail.name}</td>
-                      <td className="px-3 py-2 text-left">
+                      <td className="px-3 py-2 text-left dark:text-black">{detail.name}</td>
+                      <td className="px-3 py-2 text-left dark:text-black">
                         {detail.value_idr}
                       </td>
                       <td className="px-3 py-2 text-left space-x-2">

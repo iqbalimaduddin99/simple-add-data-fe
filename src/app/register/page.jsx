@@ -34,14 +34,14 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md border border-gray-200">
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+        <h2 className="dark:text-black text-2xl font-bold mb-6 text-center">Register</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             placeholder="Name"
             required
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="dark:text-black w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           <input
             value={form.email}
@@ -49,7 +49,7 @@ export default function RegisterPage() {
             placeholder="Email"
             type="email"
             required
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="dark:text-black w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           <input
             value={form.password}
@@ -57,7 +57,7 @@ export default function RegisterPage() {
             placeholder="Password"
             type="password"
             required
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="dark:text-black w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           <input
             value={form.password_confirmation}
@@ -67,7 +67,7 @@ export default function RegisterPage() {
             placeholder="Confirm Password"
             type="password"
             required
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="dark:text-black w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
           <button
             type="submit"

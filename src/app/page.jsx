@@ -13,7 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <Banner />
         <AdsHome />
-        <div className="p-8 md:p-16 lg:p-32">
+        <div className="p-8 md:p-16 lg:p-32 dark:bg-white">
           <SectionHome />
         </div>
       </main>

@@ -34,7 +34,7 @@ export default function Banner() {
   return (
     <div
       ref={emblaRef}
-      className="relative group w-full h-[600px] bg-white overflow-hidden border-b border-gray-300"
+      className="relative group w-full h-[600px] dark:bg-white bg-white overflow-hidden border-b border-gray-300"
     >
       <div className="flex items-center h-full w-full">
         {banners.map((src, index) => (
