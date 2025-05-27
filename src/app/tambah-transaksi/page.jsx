@@ -117,7 +117,7 @@ export default function DataTransaction() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex dark:bg-white dark:text-black">
       {toast && (
         <div
           className={`fixed top-10 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded shadow text-white text-center z-50 ${
