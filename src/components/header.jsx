@@ -11,6 +11,7 @@ export default function Header() {
   const menuItems = [
     { label: "HomePage", href: "/" },
     { label: "News", href: "/" },
+    { label: "Fibonacci", href: "/fibonacci" },
     {
       label: "Product",
       isDropdown: true,
